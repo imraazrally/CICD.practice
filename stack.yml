@@ -7,6 +7,8 @@ services:
       - '3306:3306'
     env_file:
       - ./secrets/db.env
+    deploy:
+      replicas: 1
 
   rubyappserver:
     image: rubyapp
@@ -16,3 +18,5 @@ services:
       - ./src:/var/app/current
     env_file:
       - ./secrets/db.env
+    deploy:
+      replicas: 2
