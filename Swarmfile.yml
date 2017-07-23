@@ -11,7 +11,7 @@ services:
       replicas: 1
 
   rubyappserver:
-    image: rubyapp
+    image: raisoft2008/railspracticeapp
     ports:
       - '3000:3000'
     volumes:
