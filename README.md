@@ -1,5 +1,5 @@
 #How to Run
 
 1. Clone the repo
-2. Go to folder
-3. `docker stack deploy -c Swarmfile.yml rubyapp`
+2. `docker stack deploy -c Swarmfile.yml rubyapp`
+3. navigate to http://localhost:3000
