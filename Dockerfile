@@ -5,6 +5,8 @@ RUN gem install bundler
 RUN mkdir /var/app && mkdir /var/app/current
 RUN apt-get update
 RUN apt-get install curl
+RUN apt-get install -y mysql-client 
+
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash
 RUN apt-get install nodejs -y
 
