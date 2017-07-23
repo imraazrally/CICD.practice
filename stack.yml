@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  rubyappdb:
+    image: mysql
+    ports:
+      - '3306:3306'
+    env_file:
+      - ./secrets/db.env
+
+  rubyappserver:
+    image: rubyapp
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./src:/var/app/current
+    env_file:
+      - ./secrets/db.env
